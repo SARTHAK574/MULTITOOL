@@ -16,7 +16,6 @@ show_poster() {
     sleep 2
 }
 
-# Function to display the menu
 show_menu() {
     echo -e "\e[1;32m===== Multi-Purpose Tool =====\e[0m"
     echo -e "\e[1;34m1. Cryptography (AES Encryption/Decryption)\e[0m"
@@ -37,7 +36,6 @@ encrypt_aes() {
     echo
 }
 
-# Function for AES decryption
 decrypt_aes() {
     read -p "Enter ciphertext: " ciphertext
     read -p "Enter AES key (16/24/32 bytes): " key
@@ -45,7 +43,6 @@ decrypt_aes() {
     echo
 }
 
-# Function to hide data in an image
 hide_data() {
     read -p "Enter image path: " image_path
     read -p "Enter file to hide: " data_file
@@ -53,21 +50,21 @@ hide_data() {
     echo "[*] Data hidden in output_stego_image.jpg"
 }
 
-# Function to extract data from an image
+
 extract_data() {
     read -p "Enter stego image path: " image_path
     steghide extract -sf "$image_path" -xf extracted_data.txt
     echo "[*] Data extracted to extracted_data.txt"
 }
 
-# Function for Wi-Fi hacking (start airodump-ng)
+
 wifi_hacking() {
     read -p "Enter wireless interface (e.g., wlan0): " interface
     echo "[*] Starting airodump-ng on interface $interface..."
     airodump-ng "$interface"
 }
 
-# Function for Wi-Fi password cracking
+
 wifi_password_cracking() {
     read -p "Enter path to handshake file (e.g., capture.cap): " handshake_file
     read -p "Enter path to wordlist (e.g., wordlist.txt): " wordlist
@@ -75,7 +72,7 @@ wifi_password_cracking() {
     aircrack-ng "$handshake_file" -w "$wordlist"
 }
 
-# Function for Nmap scanning
+
 nmap_scan() {
     echo -e "\e[1;32m===== Nmap Scanning =====\e[0m"
     echo -e "\e[1;34m1. Host Discovery\e[0m"
@@ -157,7 +154,6 @@ nmap_scan() {
     esac
 }
 
-# Function for Whois lookup
 whois_lookup() {
     read -p "Enter domain or IP address: " target
     echo "[*] Performing Whois lookup for $target..."
@@ -165,7 +161,7 @@ whois_lookup() {
     echo "[*] Whois lookup completed. Results saved to whois_lookup.txt"
 }
 
-# Function for Password Cracking (John the Ripper)
+
 password_cracking() {
     read -p "Enter path to the password file (e.g., hashes.txt): " password_file
     read -p "Enter path to the wordlist (e.g., wordlist.txt): " wordlist
@@ -174,7 +170,7 @@ password_cracking() {
     echo "[*] Password cracking completed. Results displayed above."
 }
 
-# Main script
+
 show_poster
 while true; do
     show_menu
