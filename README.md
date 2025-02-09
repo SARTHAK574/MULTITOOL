@@ -41,6 +41,7 @@ A  MULTITOOL tool for perform various  tasks like cryptography, steganography, W
 cd multitool
 3. Make the Script Executable
 chmod +x multitool.sh
-4. Run the Script
-./multitool.sh  
-sudo apt install $(cat requirements.txt)
+4. sudo apt install $(cat requirements.txt)
+5. Run the Script
+./multitool.sh
+
