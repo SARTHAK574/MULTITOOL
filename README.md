@@ -43,3 +43,4 @@ cd multitool
 chmod +x multitool.sh
 4. Run the Script
 ./multitool.sh  
+sudo apt install $(cat requirements.txt)
