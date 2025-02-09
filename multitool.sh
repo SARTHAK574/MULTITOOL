@@ -17,7 +17,7 @@ show_poster() {
 }
 
 show_menu() {
-    echo -e "\e[1;32m===== Multi-Purpose Tool =====\e[0m"
+    echo -e "\e[1;32m===== Multi-Uses Tool =====\e[0m"
     echo -e "\e[1;34m1. Cryptography (AES Encryption/Decryption)\e[0m"
     echo -e "\e[1;34m2. Steganography (Hide/Extract Data in Image)\e[0m"
     echo -e "\e[1;34m3. Wi-Fi Hacking (Capture Handshake)\e[0m"
