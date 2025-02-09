@@ -1,0 +1,5 @@
+apt install steghide
+apt install aircrack-ng
+apt install nmap
+apt install john
+apt install openssl
