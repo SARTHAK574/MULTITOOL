@@ -1,6 +1,5 @@
 
 NETWORK SCANNING AND WIFI SCANNING TOOL
-
 A   tool for various tasks like cryptography, steganography, Wi-Fi hacking, password cracking, and more. This tool is designed to simplify complex tasks and provide a user-friendly interface for security enthusiasts, developers, and ethical hackers.
 
 ---
@@ -34,9 +33,14 @@ A   tool for various tasks like cryptography, steganography, Wi-Fi hacking, pass
 
 ---
 
-## Usage
+ Usage
 
 ### 1. **Clone the Repository**
    ```bash
    git clone https://github.com/SARTHAK JOSHI SARTHAK574/multitool.git
-  
+2. Navigate to the Project Folder
+cd multitool
+3. Make the Script Executable
+chmod +x multitool.sh
+4. Run the Script
+./multitool.sh  
