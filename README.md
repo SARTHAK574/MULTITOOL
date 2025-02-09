@@ -1,6 +1,5 @@
 
-NETWORK SCANNING AND WIFI SCANNING TOOL
-A   tool for various tasks like cryptography, steganography, Wi-Fi hacking, password cracking, and more. This tool is designed to simplify complex tasks and provide a user-friendly interface for security enthusiasts, developers, and ethical hackers.
+A  MULTITOOL tool for perform various  tasks like cryptography, steganography, Wi-Fi hacking, password cracking, and more. This tool is designed to simplify complex tasks and provide a user-friendly interface for security enthusiasts, developers, and ethical hackers.
 
 ---
 
