@@ -1,20 +1,8 @@
-# Required Tools for multi uses tool
 
-# Steganography
 steghide
-
-# Wi-Fi Hacking and Password Cracking
 aircrack-ng
-
-# Network Scanning
 nmap
-
-# Password Cracking
 john
-
-# Cryptography (AES Encryption/Decryption)
 openssl
-
-# General Dependencies
 git
 python3
