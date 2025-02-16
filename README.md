@@ -50,3 +50,10 @@ chmod +x multitool.sh
 5. Run the Script
 ./multitool.sh
 
+
+**Disclaimer
+This tool is intended for educational and ethical purposes only.
+ Ensure you have explicit permission before using this tool on any network or system. Unauthorized access to networks, systems, or data is illegal and punishable by law.
+ Use this tool responsibly and only in environments where you have been granted permission to perform security testing.
+ This tool is provided "as-is" without any warranties. The developers are not responsible for any misuse, damage, or illegal activities conducted using this tool.
+By using this tool, you agree to use it in compliance with all applicable laws and regulations. If you do not agree with these terms, do not use this tool.**
