@@ -31,7 +31,7 @@ Wi-Fi Password Cracking: Crack Wi-Fi passwords using a captured handshake file a
  Usage
 ### 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/SARTHAK JOSHI SARTHAK574/multitool.git
+   git clone https://github.com/SARTHAK574/MULTITOOL.git
 2. Navigate to the Project Folder
 cd multitool
 3. Make the Script Executable
