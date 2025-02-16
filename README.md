@@ -39,4 +39,4 @@ chmod +x *
 4. sudo apt install $(cat requirements.txt)
 5. Run the Script
 ./multitool.sh 
-**
+
