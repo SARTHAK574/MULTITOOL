@@ -1,18 +1,12 @@
-
 A  MULTITOOL tool for perform various  tasks like cryptography, steganography, Wi-Fi hacking, password cracking, and more. This tool is designed to simplify complex tasks and provide a user-friendly interface for security enthusiasts, developers, and ethical hackers.
-
 ---
-
 ## Features
-
 ### 1. **Cryptography**
    - **AES Encryption/Decryption**: Encrypt and decrypt text using the AES algorithm.
    - Supports 16/24/32-byte keys for secure encryption.
-
 ### 2. **Steganography**
    - **Hide Data in Images**: Embed files or text into images.
    - **Extract Data from Images**: Retrieve hidden data from steganographic images.
-
 ### 3. **Wi-Fi Hacking**
  . Wi-Fi Hacking
 **Capture Handshake:
@@ -34,26 +28,15 @@ Wi-Fi Password Cracking: Crack Wi-Fi passwords using a captured handshake file a
 
 ### 6. **Password Cracking**
    - **John the Ripper**: Crack password hashes using a wordlist.
-
 ---
-
  Usage
-
 ### 1. **Clone the Repository**
    ```bash
    git clone https://github.com/SARTHAK JOSHI SARTHAK574/multitool.git
 2. Navigate to the Project Folder
 cd multitool
 3. Make the Script Executable
-chmod +x multitool.sh
+chmod +x *
 4. sudo apt install $(cat requirements.txt)
 5. Run the Script
-./multitool.sh
-
-
-**Disclaimer
-This tool is intended for educational and ethical purposes only.
- Ensure you have explicit permission before using this tool on any network or system. Unauthorized access to networks, systems, or data is illegal and punishable by law.
- Use this tool responsibly and only in environments where you have been granted permission to perform security testing.
- This tool is provided "as-is" without any warranties. The developers are not responsible for any misuse, damage, or illegal activities conducted using this tool.
-By using this tool, you agree to use it in compliance with all applicable laws and regulations. If you do not agree with these terms, do not use this tool.**
+./multitool.sh 
