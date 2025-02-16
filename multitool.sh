@@ -50,20 +50,28 @@ hide_data() {
     echo "[*] Data hidden in output_stego_image.jpg"
 }
 
-
 extract_data() {
     read -p "Enter stego image path: " image_path
     steghide extract -sf "$image_path" -xf extracted_data.txt
     echo "[*] Data extracted to extracted_data.txt"
 }
 
-
 wifi_hacking() {
     read -p "Enter wireless interface (e.g., wlan0): " interface
-    echo "[*] Starting airodump-ng on interface $interface..."
-    airodump-ng "$interface"
-}
 
+    # Check if monitor mode is already enabled
+    if iwconfig "$interface" | grep -q "Mode:Monitor"; then
+        echo "[*] Monitor mode is already enabled on $interface."
+    else
+        echo "[*] Enabling monitor mode on $interface..."
+        sudo airmon-ng start "$interface"
+        interface="${interface}mon"  # Update interface name to include 'mon'
+        echo "[*] Monitor mode enabled on $interface."
+    fi
+
+    echo "[*] Starting airodump-ng on interface $interface..."
+    sudo airodump-ng "$interface"
+}
 
 wifi_password_cracking() {
     read -p "Enter path to handshake file (e.g., capture.cap): " handshake_file
@@ -71,7 +79,6 @@ wifi_password_cracking() {
     echo "[*] Starting Wi-Fi password cracking..."
     aircrack-ng "$handshake_file" -w "$wordlist"
 }
-
 
 nmap_scan() {
     echo -e "\e[1;32m===== Nmap Scanning =====\e[0m"
@@ -161,7 +168,6 @@ whois_lookup() {
     echo "[*] Whois lookup completed. Results saved to whois_lookup.txt"
 }
 
-
 password_cracking() {
     read -p "Enter path to the password file (e.g., hashes.txt): " password_file
     read -p "Enter path to the wordlist (e.g., wordlist.txt): " wordlist
@@ -169,7 +175,6 @@ password_cracking() {
     john --wordlist="$wordlist" "$password_file"
     echo "[*] Password cracking completed. Results displayed above."
 }
-
 
 show_poster
 while true; do
