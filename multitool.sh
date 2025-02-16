@@ -66,7 +66,7 @@ wifi_hacking() {
     # Enable monitor mode
     echo "[*] Enabling monitor mode on $interface..."
     sudo airmon-ng start "$interface"
-    interface="${interface}mon"  # Update interface name to include 'mon'
+    interface="${interface}"  
     echo "[*] Monitor mode enabled on $interface."
 
     # Start scanning for nearby Wi-Fi networks
