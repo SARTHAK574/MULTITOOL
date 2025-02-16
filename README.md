@@ -14,9 +14,14 @@ A  MULTITOOL tool for perform various  tasks like cryptography, steganography, W
    - **Extract Data from Images**: Retrieve hidden data from steganographic images.
 
 ### 3. **Wi-Fi Hacking**
-   - **Capture Handshakes**: Use `airodump-ng` to capture Wi-Fi handshakes.
-   - **Crack Wi-Fi Passwords**: Use `aircrack-ng` to crack Wi-Fi passwords using a wordlist.
-
+ . Wi-Fi Hacking
+**Capture Handshake:
+Automatically kills interfering processes.
+Enables monitor mode on the specified wireless interface.
+Scans for nearby Wi-Fi networks.
+Allows the user to select a target ESSID and channel.
+Captures the handshake and saves it to a .cap file.
+Wi-Fi Password Cracking: Crack Wi-Fi passwords using a captured handshake file and a wordlist.**
 ### 4. **Nmap Scanning**
    - **Host Discovery**: Discover live hosts on a network.
    - **OS Detection**: Detect the operating system of a target.
