@@ -74,7 +74,7 @@ wifi_hacking() {
     sudo airodump-ng "$interface"
 
     # Prompt user for target ESSID and channel
-    read -p "Enter the target ESSID (Wi-Fi name): " target_bssid
+    read -p "Enter the target BSSID : " target_bssid
     read -p "Enter the target channel (e.g., 6): " target_channel
 
     # Prompt user for output file name
