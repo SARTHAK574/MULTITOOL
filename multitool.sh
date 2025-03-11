@@ -74,16 +74,16 @@ wifi_hacking() {
     sudo airodump-ng "$interface"
 
     # Prompt user for target ESSID and channel
-    read -p "Enter the target ESSID (Wi-Fi name): " target_essid
+    read -p "Enter the target ESSID (Wi-Fi name): " target_bssid
     read -p "Enter the target channel (e.g., 6): " target_channel
 
     # Prompt user for output file name
     read -p "Enter the name for the output .cap file (e.g., handshake): " output_file
 
     # Start targeted capture
-    echo "[*] Starting targeted capture on $target_essid (Channel $target_channel)..."
+    echo "[*] Starting targeted capture on $target_bssid (Channel $target_channel)..."
     echo "[*] Press Ctrl+C to stop capturing when the handshake is captured."
-    sudo airodump-ng -c "$target_channel" --essid "$target_essid" -w "$output_file" --output-format cap "$interface"
+    sudo airodump-ng -c "$target_channel" --bssid "$target_bssid" -w "$output_file" --output-format cap "$interface"
 
     echo "[*] Capture completed. Handshake saved to ${output_file}-01.cap"
 }
